@@ -25,7 +25,7 @@ def load_prompt(template_path, text):
 import google.generativeai as genai
 
 # Configure Gemini API
-GENAI_API_KEY = "AIzaSyCcTLQvt6hRtWu32833wimZzDMz0voxNqU"
+GENAI_API_KEY = os.environ.get("GENAI_API_KEY", "AIzaSyCcTLQvt6hRtWu32833wimZzDMz0voxNqU")
 genai.configure(api_key=GENAI_API_KEY)
 
 # Generate Aliquots using Gemini API
